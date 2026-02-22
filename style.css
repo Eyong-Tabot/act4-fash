@@ -1,0 +1,423 @@
+/* Add these styles to your existing CSS */
+
+/* Form Group */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+}
+
+/* Header */
+header {
+    background: black;
+    color: white;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f5f5f5;
+    border: 2px solid black;
+    margin-bottom: 30px;
+}
+
+/* Products */
+.products {
+    margin-top: 30px;
+}
+
+#products-container, #admin-products {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background: white;
+    color: black;
+}
+
+/* Cart */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.quantity-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.remove-btn {
+    color: red;
+    cursor: pointer;
+}
+
+#cart-summary {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid black;
+    background: #f5f5f5;
+}
+
+#customer-info input,
+#customer-info textarea,
+#customer-info select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid black;
+}
+
+.whatsapp-btn {
+    width: 100%;
+    padding: 15px;
+    background: #25D366;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Admin */
+#admin-login-section,
+#admin-controls {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#admin-password {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid black;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+#product-form {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#product-form input,
+#product-form textarea,
+#product-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid black;
+}
+
+.admin-product {
+    border: 2px solid black;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-product-actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    border: 2px solid black;
+    background: #f9f9f9;
+}
+
+.empty-state i {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .nav-links {
+        font-size: 14px;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Image Upload Container */
+.image-upload-container {
+    border: 2px dashed black;
+    padding: 20px;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.upload-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.upload-btn i {
+    margin-right: 8px;
+}
+
+.upload-hint {
+    font-size: 12px;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* Image Preview */
+.image-preview {
+    position: relative;
+    margin: 15px 0;
+    max-width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.image-preview img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    display: block;
+    background: #f0f0f0;
+}
+
+.remove-image {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.remove-image:hover {
+    background: darkred;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    background: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn-primary {
+    flex: 1;
+}
+
+/* Admin Product Display */
+.admin-product {
+    border: 2px solid black;
+    padding: 15px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin-product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.admin-product-info {
+    flex: 1;
+}
+
+.admin-product-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.admin-product-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.admin-product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.admin-product-actions button {
+    padding: 5px 10px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}

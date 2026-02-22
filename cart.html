@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACT4 - Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ACT4</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Your Cart</h1>
+        
+        <div id="cart-items"></div>
+        
+        <div id="cart-summary">
+            <h3>Total: $<span id="cart-total">0.00</span></h3>
+            
+            <div id="customer-info">
+                <input type="text" id="customer-name" placeholder="Your Name">
+                <input type="tel" id="customer-phone" placeholder="Your WhatsApp Number">
+                <textarea id="customer-address" placeholder="Delivery Address"></textarea>
+                
+                <button onclick="sendWhatsAppOrder()" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

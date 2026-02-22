@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACT4 - Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">ACT4 Admin</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Admin Panel</h1>
+        
+        <!-- Login Section -->
+        <div id="admin-login-section">
+            <h2>Admin Login</h2>
+            <input type="password" id="admin-password" placeholder="Enter admin password">
+            <button onclick="checkAdminPassword()">Login</button>
+            <p id="login-error" style="color: red; display: none;">Wrong password!</p>
+        </div>
+
+        <!-- Admin Controls (hidden until login) -->
+        <div id="admin-controls" style="display: none;">
+            <button onclick="showAddForm()" class="btn-primary">
+                <i class="fas fa-plus"></i> Add New Product
+            </button>
+
+            <!-- Add Product Form with Image Upload -->
+            <div id="product-form" style="display: none;">
+                <h3>Add Product</h3>
+                
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input type="text" id="product-name" placeholder="Product Name">
+                </div>
+                
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="product-desc" placeholder="Description" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Price ($)</label>
+                    <input type="number" id="product-price" placeholder="Price">
+                </div>
+                
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="product-cat">
+                        <option value="clothes">Clothes</option>
+                        <option value="jewelry">Jewelry</option>
+                        <option value="bags">Bags</option>
+                        <option value="hats">Hats</option>
+                        <option value="scarves">Scarves</option>
+                    </select>
+                </div>
+                
+                <!-- Image Upload Section -->
+                <div class="form-group">
+                    <label>Product Image</label>
+                    <div class="image-upload-container">
+                        <!-- Hidden file input -->
+                        <input type="file" id="product-image-file" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+                        
+                        <!-- Custom upload button -->
+                        <button type="button" class="upload-btn" onclick="document.getElementById('product-image-file').click()">
+                            <i class="fas fa-camera"></i> Choose from Gallery
+                        </button>
+                        
+                        <!-- Image preview -->
+                        <div id="image-preview" class="image-preview" style="display: none;">
+                            <img id="preview-img" src="" alt="Preview">
+                            <button type="button" class="remove-image" onclick="removeImage()">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Hidden input for image data -->
+                        <input type="hidden" id="product-image-data">
+                        
+                        <p class="upload-hint">Tap to upload image from your gallery</p>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button onclick="saveProduct()" class="btn-primary">Save Product</button>
+                    <button onclick="hideForm()" class="btn-secondary">Cancel</button>
+                </div>
+            </div>
+
+            <!-- Products List -->
+            <h3>Your Products</h3>
+            <div id="admin-products"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
